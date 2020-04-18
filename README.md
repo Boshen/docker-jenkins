@@ -10,3 +10,8 @@ docker -it jenkins /bin/bash
 docker version
 
 docker client versions should match, and all docker results (e.g. `docker images`) should match
+
+To change timezone, in Script Console:
+```
+System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai')
+```
