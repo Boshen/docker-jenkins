@@ -15,3 +15,8 @@ To change timezone, in Script Console:
 ```
 System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai')
 ```
+
+Add webhook, in Github - Project - Settings - Webhooks
+```
+https:/jenkins.xxx.com/github-webhook/
+```
