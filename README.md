@@ -20,3 +20,8 @@ Add webhook, in Github - Project - Settings - Webhooks
 ```
 https:/jenkins.xxx.com/github-webhook/
 ```
+
+Prune everyday
+```
+crontab -l | { cat; echo "0 19 * * * docker system prune --volumes -f"; } | crontab -
+```
