@@ -7,6 +7,8 @@ ARG GROUP_DOCKER_GID=1001
 
 USER ${USER_ROOT}
 
+COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
+
 RUN addgroup -gid ${GROUP_DOCKER_GID} ${GROUP_DOCKER} \
         && addgroup ${USER_JENKINS} ${GROUP_DOCKER}
 
