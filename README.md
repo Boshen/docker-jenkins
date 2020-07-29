@@ -1,5 +1,10 @@
 Install Jenkins with docker in docker
 
+# Install
+```
+./docker-run
+```
+
 Run on host:
 docker version
 
@@ -23,5 +28,5 @@ https:/jenkins.xxx.com/github-webhook/
 
 Prune everyday
 ```
-crontab -l | { cat; echo "0 19 * * * docker system prune --volumes -f"; } | crontab -
+crontab -l | { cat; echo "0 19 * * * docker system prune --volumes --all --force"; } | crontab -
 ```
