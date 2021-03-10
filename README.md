@@ -1,7 +1,8 @@
-Install Jenkins with docker in docker
+# Install Jenkins with docker in docker
 
-# Install
-```
+## Install
+
+```sh
 ./docker-run
 ```
 
@@ -17,16 +18,22 @@ docker version
 docker client versions should match, and all docker results (e.g. `docker images`) should match
 
 To change timezone, in Script Console:
-```
+
+```java
 System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai')
 ```
 
-Add webhook, in Github - Project - Settings - Webhooks
-```
-https:/jenkins.xxx.com/github-webhook/
-```
+Add webhook, in Github - Project - Settings - Webhooks `https:/jenkins.xxx.com/github-webhook/`
 
 Prune everyday
-```
+
+```sh
 crontab -l | { cat; echo "0 19 * * * docker system prune --volumes --all --force"; } | crontab -
+```
+
+Upgrade
+
+```sh
+jenkins/jenkins:lts
+./docker-run
 ```

@@ -1,4 +1,4 @@
-from jenkins/jenkins:lts
+FROM jenkins/jenkins:lts
 
 ARG USER_JENKINS=jenkins
 ARG USER_ROOT=root
