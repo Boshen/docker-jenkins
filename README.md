@@ -17,6 +17,13 @@ docker version
 
 docker client versions should match, and all docker results (e.g. `docker images`) should match
 
+## After Installation
+
+```
+docker exec -it jenkins /bin/sh
+docker hub login
+```
+
 To change timezone, in Script Console:
 
 ```java
