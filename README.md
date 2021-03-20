@@ -17,6 +17,9 @@ docker version
 
 docker client versions should match, and all docker results (e.g. `docker images`) should match
 
+## Note
+GROUP_DOCKER_GID should align with `docker` user in `cat /etc/group`
+
 ## After Installation
 
 ```
