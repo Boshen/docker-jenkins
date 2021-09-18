@@ -23,7 +23,7 @@ RUN add-apt-repository \
    stable"
 
 RUN apt-get update  -qq \
-    && apt-get install docker-ce=18.06.3~ce~3-0~debian -y
+    && apt-get install docker-ce-cli -y
 
 RUN rm -rf /var/lib/apt/lists/*
 RUN echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
