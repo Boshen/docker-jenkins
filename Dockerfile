@@ -34,5 +34,6 @@ COPY docker-socket.sh /
 
 # keep people logged in for 24 hours and 12 hours of inactivity
 ENV JENKINS_OPTS --sessionTimeout=1440 --sessionEviction=43200
+ENV JAVA_OPTS "-Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8"
 
 ENTRYPOINT ["/docker-socket.sh"]
